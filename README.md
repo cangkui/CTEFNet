@@ -51,15 +51,7 @@ dataset
 
 CTEFNet 在模型训练中使用自定义加权损失。计算公式为：
 
-$$
-L_{fmse} = \frac{1}{23T}\sum^{T}_{t=1}{}\sum^{35}_{l=13}{(n_{t,l} - \hat{n}_{t,l})^2}\ , \\ \\
-L_{omse} = \frac{1}{12T}\sum^{T}_{t=1}{}\sum^{12}_{l=1}{(n_{t,l} - \hat{n}_{t,l})^2}\ , \\ \\
-
-L_{corr} = \frac{1}{23}\sum^{35}_{l=13}{max \lbrack 0,0.5-\frac{\sum^{T}_{t=1}{(n_{t,l} - \overline{n}_{l})(\hat{n}_{t,l} - \overline{\hat{n}}_{l})}}{\sqrt{\sum^{T}_{t=1}{(n_{t,l} - \overline{n}_{l})^2}} \sqrt{\sum^{T}_{t=1}{(\hat{n_{t,l}} - \overline{\hat{n}}_{l})^2}}} \rbrack } \ ,  \\ \\
-
-L_{all} = \alpha L_{fmse} + \beta L_{omse} + \gamma L_{corr} \\
-
-$$
+![loss_func](images/Loss.png)
 
 ### 运行结果
 
