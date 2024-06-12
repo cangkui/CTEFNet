@@ -1,0 +1,20 @@
+2024-06-11 17:44:22,360 - pretrain.py[line:215] - INFO: steps_per_epoch: 60
+2024-06-11 17:44:22,360 - pretrain.py[line:215] - INFO: steps_per_epoch: 60
+2024-06-11 17:46:43,209 - pretrain.py[line:215] - INFO: steps_per_epoch: 1
+2024-06-11 17:46:43,209 - pretrain.py[line:215] - INFO: steps_per_epoch: 1
+2024-06-11 17:48:19,908 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_1
+2024-06-11 17:48:19,908 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_1
+2024-06-11 17:49:41,136 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_1
+2024-06-11 17:49:41,136 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_1
+2024-06-11 17:49:41,967 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_2
+2024-06-11 17:49:41,967 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_2
+2024-06-11 17:49:47,800 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_1
+2024-06-11 17:49:47,800 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_1
+2024-06-11 17:49:48,637 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_2
+2024-06-11 17:49:48,637 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_2
+2024-06-12 16:11:34,142 - pretrain.py[line:215] - INFO: steps_per_epoch: 60
+2024-06-12 16:18:07,801 - pretrain.py[line:215] - INFO: steps_per_epoch: 1
+2024-06-12 16:20:57,077 - pretrain.py[line:215] - INFO: steps_per_epoch: 1
+2024-06-12 16:23:48,166 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_1
+2024-06-12 16:26:04,031 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_1
+2024-06-12 16:26:04,748 - 2085024365.py[line:5] - INFO: Load pre-trained model successfully, ./summary/ckpt/step_2
