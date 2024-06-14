@@ -50,7 +50,7 @@ CNN 部分包含三个卷积层、三个最大池化层；以连续 12 个月的
 
 提取出的特征排列为序列后将输入 Transformer 编码器进行序列分析，并与CNN构成残差结构，最后经过全连接层输出观测期 12 个月的Nino3.4 指数估计值及后续 23 个月的 Nino3.4 指数预测值。
 
-## 工作
+## 2 工作
 
 基于Jupyter Notebook运行训练与推理代码，通过MindEarth训练和快速推理模型。  
 
@@ -60,14 +60,14 @@ CNN 部分包含三个卷积层、三个最大池化层；以连续 12 个月的
 
 配置：GPU: 1*Pnt1(16GB) | CPU: 8核 64GB  
 
-## 技术路径
+## 3 技术路径
 
-### 框架
+### 3.1 框架
 
 1. MindSpore 2.0.0
 2. MindEarth-GPU，通过pip安装：`pip install mindearth_gpu`
 
-### 数据集
+### 3.2 数据集
 
 训练和测试所用的数据集可以在: [mindearth/dataset](https://download-mindspore.osinfra.cn/mindscience/mindearth/dataset/enso_dataset.zip) 下载。
 
@@ -82,13 +82,33 @@ dataset
 └── SODA_sst_ssh_slp.npy
 ```
 
-### 损失函数
+原论文数据集分析：
+
+1. 观测数据：
+
+- 海洋数据： 来自 Global Ocean Data Assimilation System (GODAS) 的月平均海表温度 (SST) 和海洋热量含量 (HC) 数据，时间范围为 1984-2017 年。
+
+- 大气数据： 来自 ERA-Interim 存档的 925 hPa 水平风矢量数据和降水数据，时间范围为 1984-2017 年。
+
+2. 模拟数据：
+
+- CMIP5 模型输出： 来自 21 个 CMIP5 模型的历史模拟数据，用于训练 CNN 模型。这些模型模拟了 ENSO 现象，并提供了大量的样本数据。
+
+- SINTEX-F 模型输出： SINTEX-F 模型的 hindcast 数据，用于与 CNN 模型进行预测性能比较。
+
+3. 再分析数据：
+
+- SODA 再分析数据： 来自 Simple Ocean Data Assimilation (SODA) 版本 2.2.4 的再分析数据，时间范围为 1871-1973 年，用于训练 CNN 模型。
+
+本次我们使用 CMIP5 数据对 CTEFNet 模型进行预训练，使用1984年前的 SODA 再分析数据对模型进行调优。
+
+### 3.3 损失函数
 
 CTEFNet 在模型训练中使用自定义加权损失。计算公式为：
 
 ![loss_func](images/Loss.png)
 
-### 运行结果
+### 3.4 运行结果
 
 运行结果位于`summary`目录下。该目录下：
 
